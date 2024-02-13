@@ -1,0 +1,60 @@
+@import "variables";
+
+.board {
+  display: flex;
+  gap: 1rem;
+  background-color: var(--color-bg-secondary);
+  width: calc(100vw - var(--sidebar-width));
+  height: calc(100vh - $header-height);
+  padding: 1rem;
+  overflow: auto;
+}
+
+.new-column {
+  margin-top: 36px;
+  width: $column-width;
+  height: calc(100% - 36px);
+  background-color: var(--color-bg-tretiary);
+  border-radius: 0.5rem;
+  display: flex;
+  flex: 0 0 auto;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 700;
+  color: $color-gray;
+  cursor: pointer;
+}
+
+.column-wrapper {
+  flex: 0 0 auto;
+  width: $column-width;
+
+  .column-name {
+    color: $color-gray;
+  }
+
+  .task-wrapper {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+.task {
+  cursor: pointer;
+  width: 100%;
+  padding: 1rem 1rem;
+  border-radius: 0.5rem;
+  background-color: var(--color-bg-primary);
+
+  .task-title {
+    color: var(--color-primary);
+  }
+
+  .task-text {
+    color: $color-gray;
+    margin-top: 0.25rem;
+  }
+}

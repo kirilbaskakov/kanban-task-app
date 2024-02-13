@@ -1,0 +1,116 @@
+@import "variables";
+
+.sidebar {
+  display: flex;
+  background-color: var(--color-bg-primary);
+  flex-direction: column;
+  width: var(--sidebar-width);
+  height: calc(100vh - $header-height);
+  padding: 1.5rem 1rem;
+
+  &.hidden {
+    display: none;
+  }
+}
+
+.hide-sidebar {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin-left: 0.75rem;
+  margin-top: 1.5rem;
+
+  .title {
+    color: $color-gray;
+    margin-left: 0.75rem;
+  }
+}
+
+.show-sidebar {
+  cursor: pointer;
+  position: fixed;
+  padding: 0.75rem 1rem 0.75rem 1.5rem;
+  background-color: $color-bg-button;
+  border-radius: 0 1.5rem 1.5rem 0;
+  top: 85%;
+}
+
+.board-list-title {
+  color: $color-gray;
+  margin-left: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.board-name-wrapper {
+  margin-left: -1rem;
+  padding: 0.8rem 1.6rem;
+  border-radius: 0 1.5rem 1.5rem 0;
+  cursor: pointer;
+  color: $color-gray;
+
+  &.active {
+    background-color: $color-bg-button;
+    color: $color-white;
+  }
+}
+
+.board-name {
+  margin-left: 0.75rem;
+}
+
+.create-board-wrapper {
+  margin-left: -1rem;
+  margin-bottom: 1rem;
+  padding: 0.8rem 1.6rem;
+  border-radius: 0 1.5rem 1.5rem 0;
+  cursor: pointer;
+
+  .create-board-icon {
+    filter: invert(39%) sepia(47%) saturate(748%) hue-rotate(203deg)
+      brightness(94%) contrast(93%);
+  }
+
+  .create-board {
+    margin-left: 0.75rem;
+    color: $color-bg-button;
+  }
+}
+
+.theme-button-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  background-color: var(--color-bg-tretiary);
+  width: 100%;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  margin-top: auto;
+  align-self: center;
+}
+
+.theme-button {
+  background-color: $color-bg-button;
+  width: 45px;
+  height: 22px;
+  padding: 3px;
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  &.light {
+    justify-content: flex-start;
+  }
+
+  &.dark {
+    justify-content: flex-end;
+  }
+}
+
+.theme-button-circle {
+  background-color: $color-white;
+  height: 16px;
+  width: 16px;
+  border-radius: 100%;
+}

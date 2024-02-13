@@ -1,0 +1,143 @@
+@import "variables";
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  display: flex;
+  margin-top: $header-height;
+}
+
+input[type="text"] {
+  width: 100%;
+  border: 1px solid $color-gray;
+  border-radius: 0.25rem;
+  padding: 0.5rem 1rem;
+  color: var(--color-primary);
+  background-color: var(--color-bg-primary);
+}
+
+input[type="checkbox"] {
+  accent-color: $color-bg-button;
+  min-width: 16px;
+  min-height: 16px;
+  cursor: pointer;
+}
+
+textarea {
+  width: 100%;
+  border: 1px solid $color-gray;
+  border-radius: 0.25rem;
+  padding: 0.5rem 1rem;
+  resize: none;
+  overflow: auto;
+  height: 150px;
+  color: var(--color-primary);
+  background-color: var(--color-bg-primary);
+}
+
+button {
+  cursor: pointer;
+  font-weight: bold;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 1.5rem;
+  background-color: $color-bg-button;
+  color: $color-white;
+
+  &.secondary {
+    background-color: $color-bg-button-secondary;
+    color: $color-bg-button;
+  }
+
+  &.danger {
+    background-color: $color-red;
+    color: $color-white;
+  }
+
+  &.full-width {
+    width: 100%;
+  }
+}
+
+.kebab-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  cursor: pointer;
+  padding: 0.5rem;
+
+  .point {
+    width: 5px;
+    height: 5px;
+    border-radius: 100%;
+    background-color: $color-gray;
+  }
+}
+
+.kebab-dropdown {
+  position: absolute;
+  background-color: var(--color-bg-primary);
+  border-radius: 0.5rem;
+  padding: 1rem 2.5rem 1rem 1rem;
+  transform: translate(-95%, 10px);
+  box-shadow: 0 10px 20px rgba(54, 78, 126, 0.25);
+  white-space: nowrap;
+  cursor: pointer;
+
+  .edit {
+    color: $color-gray;
+  }
+
+  .delete {
+    color: $color-red;
+    margin-top: 1rem;
+  }
+}
+
+.multi-input {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  .line {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+
+    .icon {
+      cursor: pointer;
+    }
+  }
+}
+
+select {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border: 1px solid black;
+  border-radius: 0.25rem;
+  color: var(--color-primary);
+  background-color: var(--color-bg-primary);
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+*::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+* {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}

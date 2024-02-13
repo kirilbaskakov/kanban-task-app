@@ -1,0 +1,105 @@
+@import "variables";
+
+.modal-background {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.4);
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.modal {
+  position: fixed;
+  max-height: 90%;
+  overflow: auto;
+  background-color: var(--color-bg-primary);
+  padding: 1.5rem 2rem;
+  border-radius: 0.5rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+}
+
+.modal-wrapper {
+  width: 30vw;
+  min-width: 300px;
+
+  .title {
+    color: var(--color-primary);
+  }
+
+  .form {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    .label {
+      line-height: 2rem;
+      color: $color-gray;
+    }
+  }
+}
+
+.task-modal-heading {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  color: var(--color-primary);
+}
+
+.task-description {
+  color: $color-gray;
+}
+
+.subtask-heading {
+  color: $color-gray;
+}
+
+.subtask {
+  padding: 0.75rem 1.5rem;
+  background-color: var(--color-bg-tretiary);
+  margin-top: 0.5rem;
+  border-radius: 0.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--color-primary);
+
+  .completed {
+    color: $color-gray;
+    text-decoration: line-through;
+  }
+}
+
+.delete-modal {
+  width: 45vw;
+  min-width: 280px;
+
+  .title {
+    color: $color-red;
+  }
+
+  .description {
+    margin: 1.5rem 0;
+    color: $color-gray;
+  }
+
+  .buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+  }
+}
+
+.sidebar-modal {
+  top: calc($header-height + 20px);
+  transform: translate(-50%, 0);
+}
+
+.sidebar-modal-background {
+  z-index: 98;
+}

@@ -1,0 +1,31 @@
+/*colors*/
+$color-bg-button: rgb(99, 95, 199);
+$color-bg-button-secondary: rgba(138, 43, 226, 0.1);
+$color-gray: rgb(130, 143, 163);
+$color-red: rgb(234, 85, 85);
+$color-white: rgb(255, 255, 255);
+
+/*sizes*/
+$header-height: 80px;
+$sidebar-width: 300px;
+$column-width: 300px;
+
+body {
+  --color-bg-primary: rgb(255, 255, 255);
+  --color-bg-secondary: rgb(244, 247, 253);
+  --color-bg-tretiary: rgb(233, 239, 250);
+  --color-primary: rgb(0, 0, 0);
+
+  --sidebar-width: 300px;
+
+  &.dark {
+    --color-bg-primary: rgb(43, 44, 55);
+    --color-bg-secondary: rgb(32, 33, 44);
+    --color-bg-tretiary: rgb(35, 40, 51);
+    --color-primary: rgb(255, 255, 255);
+  }
+
+  &.sidebar-hidden {
+    --sidebar-width: 0px;
+  }
+}

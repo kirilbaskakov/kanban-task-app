@@ -1,0 +1,31 @@
+@import "variables";
+
+header {
+  background-color: var(--color-bg-primary);
+  position: fixed;
+  top: 0;
+  z-index: 99;
+  width: 100%;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  height: $header-height;
+
+  .icon {
+    cursor: pointer;
+  }
+
+  .board-name {
+    color: var(--color-primary);
+    margin-left: 1rem;
+    margin-right: 0.75rem;
+    @media (min-width: 767px) {
+      margin-left: 8rem;
+    }
+  }
+
+  .add-btn {
+    margin-left: auto;
+    margin-right: 1.5rem;
+  }
+}
